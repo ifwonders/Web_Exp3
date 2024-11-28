@@ -8,8 +8,8 @@ import (
 	"gf-demo-takeaway/api/takeaway"
 )
 
-type ControllerV1 struct{}
+type ControllerV2 struct{}
 
-func NewV1() takeaway.ITakeawayV1 {
-	return &ControllerV1{}
+func NewV2() takeaway.ITakeawayV2 {
+	return &ControllerV2{}
 }
