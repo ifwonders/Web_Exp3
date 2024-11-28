@@ -14,7 +14,7 @@ const (
 )
 
 type OrderCreateReq struct {
-	g.Meta      `path:"/order" method:"post" tags:"order" summary:"Create order"`
+	g.Meta      `path:"/order" method:"post" tags:"Order" summary:"Create order"`
 	UserId      int         `v:"required" dc:"user id"`
 	MerchantId  int         `v:"required" dc:"merchant_id"`
 	OrderStatus OrderStatus `v:"required" dc:"order_status"`
