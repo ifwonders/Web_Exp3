@@ -11,7 +11,7 @@ import (
 
 func (c *ControllerV2) OrderUpdate(ctx context.Context, req *v2.OrderUpdateReq) (res *v2.OrderUpdateRes, err error) {
 	_, err = dao.Order.Ctx(ctx).Data(do.Order{
-		UserId:      req.UserId,
+		CustomerId:  req.CustomerId,
 		MerchantId:  req.MerchantId,
 		OrderStatus: req.OrderStatus,
 		TotalPrice:  req.TotalPrice,

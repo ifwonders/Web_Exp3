@@ -21,7 +21,7 @@ type OrderDao struct {
 // OrderColumns defines and stores column names for table order.
 type OrderColumns struct {
 	Id          string //
-	UserId      string //
+	CustomerId  string //
 	MerchantId  string //
 	OrderStatus string //
 	TotalPrice  string //
@@ -32,7 +32,7 @@ type OrderColumns struct {
 // orderColumns holds the columns for table order.
 var orderColumns = OrderColumns{
 	Id:          "id",
-	UserId:      "user_id",
+	CustomerId:  "customer_id",
 	MerchantId:  "merchant_id",
 	OrderStatus: "order_status",
 	TotalPrice:  "total_price",

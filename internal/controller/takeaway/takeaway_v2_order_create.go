@@ -11,7 +11,7 @@ import (
 
 func (c *ControllerV2) OrderCreate(ctx context.Context, req *v2.OrderCreateReq) (res *v2.OrderCreateRes, err error) {
 	insertId, err := dao.Order.Ctx(ctx).Data(do.Order{
-		UserId:      req.UserId,
+		CustomerId:  req.CustomerId,
 		MerchantId:  req.MerchantId,
 		OrderStatus: req.OrderStatus,
 		TotalPrice:  req.TotalPrice,

@@ -13,7 +13,7 @@ import (
 type Order struct {
 	g.Meta      `orm:"table:order, do:true"`
 	Id          interface{} //
-	UserId      interface{} //
+	CustomerId  interface{} //
 	MerchantId  interface{} //
 	OrderStatus interface{} //
 	TotalPrice  interface{} //

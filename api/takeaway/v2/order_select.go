@@ -14,7 +14,7 @@ type OrderGetOneRes struct {
 }
 type OrderGetListReq struct {
 	g.Meta     `path:"/order" method:"get" tags:"Order" summary:"Get orders"`
-	UserId     int `dc:"user id"`
+	CustomerId int `dc:"customer id"`
 	MerchantId int `dc:"merchant id"`
 }
 type OrderGetListRes struct {

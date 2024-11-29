@@ -11,7 +11,7 @@ import (
 func (c *ControllerV2) OrderGetList(ctx context.Context, req *v2.OrderGetListReq) (res *v2.OrderGetListRes, err error) {
 	res = &v2.OrderGetListRes{}
 	err = dao.Order.Ctx(ctx).Where(do.Order{
-		UserId:     req.UserId,
+		CustomerId: req.CustomerId,
 		MerchantId: req.MerchantId,
 	}).Scan(&res.List)
 	return
