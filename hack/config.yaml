@@ -8,5 +8,5 @@ gfcli:
 #      - my.image.pub/my-app
   gen:
     dao:
-      - link: "mysql:gostudy:123456@tcp(127.0.0.1:3306)/takeaway"
+      - link: "mysql:GOstudy:GOstudy@tcp(127.0.0.1:3306)/takeaway"
         descriptionTag: true
