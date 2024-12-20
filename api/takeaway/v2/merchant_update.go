@@ -1,6 +1,9 @@
 package v2
 
-import "github.com/gogf/gf/v2/frame/g"
+import (
+	"gf-demo-takeaway/internal/model/entity"
+	"github.com/gogf/gf/v2/frame/g"
+)
 
 type MerchantUpdateReq struct {
 	g.Meta  `path:"/merchant/{id}" method:"put" tags:"Merchant" summary:"Update merchant"`
@@ -9,4 +12,6 @@ type MerchantUpdateReq struct {
 	Address *string `v:"required" dc:"merchant address"`
 	Mobile  *string `v:"required" dc:"merchant mobile"`
 }
-type MerchantUpdateRes struct{}
+type MerchantUpdateRes struct {
+	One *entity.Merchant `dc:"merchant"`
+}

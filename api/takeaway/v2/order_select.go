@@ -10,12 +10,12 @@ type OrderGetOneReq struct {
 	Id     int64 `v:"required" dc:"order id"`
 }
 type OrderGetOneRes struct {
-	*entity.Order `dc:"order"`
+	One *entity.Order `dc:"order"`
 }
 type OrderGetListReq struct {
 	g.Meta     `path:"/order" method:"get" tags:"Order" summary:"Get orders"`
-	CustomerId int `dc:"customer id"`
-	MerchantId int `dc:"merchant id"`
+	CustomerId int64 `dc:"customer id"`
+	MerchantId int64 `dc:"merchant id"`
 }
 type OrderGetListRes struct {
 	List []*entity.Order `json:"list" dc:"order list"`

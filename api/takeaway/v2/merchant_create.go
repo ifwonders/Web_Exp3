@@ -1,6 +1,9 @@
 package v2
 
-import "github.com/gogf/gf/v2/frame/g"
+import (
+	"gf-demo-takeaway/internal/model/entity"
+	"github.com/gogf/gf/v2/frame/g"
+)
 
 type MerchantCreateReq struct {
 	g.Meta  `path:"/merchant" method:"post" tags:"Merchant" summary:"Create merchant"`
@@ -9,5 +12,5 @@ type MerchantCreateReq struct {
 	Mobile  string `v:"required" dc:"merchant mobile"`
 }
 type MerchantCreateRes struct {
-	Id int64 `json:"id" dc:"merchant id"`
+	One *entity.Merchant `dc:"merchant"`
 }

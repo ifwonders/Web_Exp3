@@ -10,13 +10,11 @@ type CustomerGetOneReq struct {
 	Id     int64 `v:"required" dc:"customer id"`
 }
 type CustomerGetOneRes struct {
-	*entity.Customer `dc:"customer"`
+	One *entity.Customer `dc:"customer"`
 }
 type CustomerGetListReq struct {
 	g.Meta       `path:"/customer" method:"get" tags:"Customer" summary:"Get customers"`
-	Customername string `v:"length:3,10" dc:"customername"`
-	Mobile       string `dc:"mobile"`
-	Email        string `dc:"email"`
+	CustomerName string `v:"length:3,10" dc:"customer name"`
 }
 type CustomerGetListRes struct {
 	List []*entity.Customer `json:"list" dc:"customer list"`

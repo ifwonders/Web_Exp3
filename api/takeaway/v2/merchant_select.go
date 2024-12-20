@@ -10,7 +10,7 @@ type MerchantGetOneReq struct {
 	Id     int64 `v:"required" dc:"merchant id"`
 }
 type MerchantGetOneRes struct {
-	*entity.Merchant `dc:"merchant"`
+	One *entity.Merchant `dc:"merchant"`
 }
 type MerchantGetListReq struct {
 	g.Meta  `path:"/merchant" method:"get" tags:"Merchant" summary:"Get merchants"`

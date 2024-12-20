@@ -1,14 +1,17 @@
 package v2
 
-import "github.com/gogf/gf/v2/frame/g"
+import (
+	"gf-demo-takeaway/internal/model/entity"
+	"github.com/gogf/gf/v2/frame/g"
+)
 
 type CustomerCreateReq struct {
 	g.Meta       `path:"/customer" method:"post" tags:"Customer" summary:"Create customer"`
-	Customername string `v:"required|length:3,10" dc:"customername"`
+	CustomerName string `v:"required|length:3,10" dc:"customer name"`
 	Password     string `v:"required" dc:"customer password"`
 	Mobile       string `dc:"mobile"`
 	Email        string `dc:"email"`
 }
 type CustomerCreateRes struct {
-	Id int64 `json:"id" dc:"customer id"`
+	One *entity.Customer `dc:"customer"`
 }
